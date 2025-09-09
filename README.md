@@ -1,5 +1,7 @@
 ## Diablo 1 for web browsers!
 
+**[🇹🇼 繁體中文說明文件](readme.zh-tw.md)**
+
 This project is based on https://github.com/diasurgical/devilution.
 
 Source code to build the WebAssembly modules is here: https://github.com/d07RiV/devilution

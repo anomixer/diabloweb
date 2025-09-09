@@ -1,0 +1,29 @@
+{
+  "ui": {
+    "loading": "Loading...",
+    "manageSaves": "Manage Saves",
+    "uploadSave": "Upload Save",
+    "back": "Back",
+    "selectMPQ": "Select MPQ",
+    "playShareware": "Play Shareware",
+    "downloadSave": "Download save file",
+    "deleteSave": "Are you sure you want to delete {fileName}?",
+    "language": "Language"
+  },
+  "intro": {
+    "description": "This is a web port of the original Diablo game, based on source code reconstructed by GalaXyHaXz and devilution team. The project page with information and links can be found over here",
+    "gameOwnership": "If you own the original game, you can drop the original DIABDAT.MPQ onto this page or click the button below to start playing. The game can be purchased from",
+    "compressionOption": "Click here to compress the MPQ, greatly reducing its size.",
+    "sharewareOption": "Or you can play the shareware version for free (50MB download)."
+  },
+  "errors": {
+    "errorOccurred": "The following error has occurred:",
+    "createIssue": "Click to create an issue on GitHub",
+    "invalidMPQ": "Please select an MPQ file. If you downloaded the installer from GoG, you will need to install it on PC and use the MPQ file from the installation folder."
+  },
+  "playerClass": {
+    "0": "Warrior",
+    "1": "Rogue", 
+    "2": "Sorcerer"
+  }
+}

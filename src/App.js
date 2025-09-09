@@ -5,6 +5,8 @@ import ReactGA from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faDownload } from '@fortawesome/free-solid-svg-icons';
 import getPlayerName from './api/savefile';
+import i18n from './i18n';
+import LanguageSelector from './components/LanguageSelector';
 
 import { mapStackTrace } from 'sourcemapped-stacktrace';
 
@@ -97,7 +99,7 @@ const Link = ({children, ...props}) => <a target="_blank" rel="noopener noreferr
 
 class App extends React.Component {
   files = new Map();
-  state = {started: false, loading: false, dropping: 0, has_spawn: false};
+  state = {started: false, loading: false, dropping: 0, has_spawn: false, language: i18n.getCurrentLanguage()};
   cursorPos = {x: 0, y: 0};
 
   touchControls = false;
@@ -131,6 +133,12 @@ class App extends React.Component {
     document.addEventListener("dragenter", this.onDragEnter, true);
     document.addEventListener("dragleave", this.onDragLeave, true);
 
+    // Add i18n listener
+    this.handleLanguageChange = (newLanguage) => {
+      this.setState({language: newLanguage});
+    };
+    i18n.addListener(this.handleLanguageChange);
+
     this.fs.then(fs => {
       const spawn = fs.files.get('spawn.mpq');
       if (spawn && SpawnSizes.includes(spawn.byteLength)) {
@@ -140,6 +148,12 @@ class App extends React.Component {
         this.setState({save_names: true});
       }
     });
+  }
+
+  componentWillUnmount() {
+    if (this.handleLanguageChange) {
+      i18n.removeListener(this.handleLanguageChange);
+    }
   }
 
   onDrop = e => {
@@ -252,7 +266,7 @@ class App extends React.Component {
     });
   }
   removeSave(name) {
-    if (window.confirm(`Are you sure you want to delete ${name}?`)) {
+    if (window.confirm(i18n.t('ui.deleteSave', {fileName: name}))) {
       (async () => {
         const fs = await this.fs;
         await fs.delete(name.toLowerCase());
@@ -310,7 +324,7 @@ class App extends React.Component {
       return;
     }
     if (file && !file.name.match(/\.mpq$/i)) {
-      window.alert('Please select an MPQ file. If you downloaded the installer from GoG, you will need to install it on PC and use the MPQ file from the installation folder.');
+      window.alert(i18n.t('errors.invalidMPQ'));
       return;
     }
 
@@ -682,21 +696,20 @@ class App extends React.Component {
   renderUi() {
     const {started, loading, error, progress, has_spawn, save_names, show_saves, compress} = this.state;
     if (show_saves && typeof save_names === "object") {
-      const plrClass = ["Warrior", "Rogue", "Sorcerer"];
       return (
         <div className="start">
           <ul className="saveList">
             {Object.entries(save_names).map(([name, info]) => <li key={name}>
-              {name}{info ? <span className="info">{info.name} (lv. {info.level} {plrClass[info.cls]})</span> : ""}
+              {name}{info ? <span className="info">{info.name} (lv. {info.level} {i18n.t(`playerClass.${info.cls}`)})</span> : ""}
               <FontAwesomeIcon className="btnDownload" icon={faDownload} onClick={() => this.downloadSave(name)}/>
               <FontAwesomeIcon className="btnRemove" icon={faTimes} onClick={() => this.removeSave(name)}/>
             </li>)}
           </ul>
           <form>
-            <label htmlFor="loadFile" className="startButton">Upload Save</label>
+            <label htmlFor="loadFile" className="startButton">{i18n.t('ui.uploadSave')}</label>
             <input accept=".sv" type="file" id="loadFile" style={{display: "none"}} onChange={this.parseSave}/>
           </form>
-          <div className="startButton" onClick={() => this.setState({show_saves: false})}>Back</div>
+          <div className="startButton" onClick={() => this.setState({show_saves: false})}>{i18n.t('ui.back')}</div>
         </div>
       );
     } else if (compress) {
@@ -706,16 +719,16 @@ class App extends React.Component {
     } else if (error) {
       return (
         <Link className="error" href={reportLink(error, this.state.retail)}>
-          <p className="header">The following error has occurred:</p>
+          <p className="header">{i18n.t('errors.errorOccurred')}</p>
           <p className="body">{error.message}</p>
-          <p className="footer">Click to create an issue on GitHub</p>
-          {error.save != null && <a href={error.save} download={this.saveName}>Download save file</a>}
+          <p className="footer">{i18n.t('errors.createIssue')}</p>
+          {error.save != null && <a href={error.save} download={this.saveName}>{i18n.t('ui.downloadSave')}</a>}
         </Link>
       );
     } else if (loading && !started) {
       return (
         <div className="loading">
-          {(progress && progress.text) || 'Loading...'}
+          {(progress && progress.text) || i18n.t('ui.loading')}
           {progress != null && !!progress.total && (
             <span className="progressBar"><span><span style={{width: `${Math.round(100 * progress.loaded / progress.total)}%`}}/></span></span>
           )}
@@ -725,25 +738,23 @@ class App extends React.Component {
       return (
         <div className="start">
           <p>
-            This is a web port of the original Diablo game, based on source code reconstructed by
-            GalaXyHaXz and devilution team. The project page with information and links can be found over here <Link href="https://github.com/d07RiV/diabloweb">https://github.com/d07RiV/diabloweb</Link>
+            {i18n.t('intro.description')}{" "}<Link href="https://github.com/d07RiV/diabloweb">https://github.com/d07RiV/diabloweb</Link>
           </p>
           <p>
-            If you own the original game, you can drop the original DIABDAT.MPQ onto this page or click the button below to start playing.
-            The game can be purchased from <Link href="https://www.gog.com/game/diablo">GoG</Link>.
-            {" "}<span className="link" onClick={() => this.setState({compress: true})}>Click here to compress the MPQ, greatly reducing its size.</span>
+            {i18n.t('intro.gameOwnership')}{" "}<Link href="https://www.gog.com/game/diablo">GoG</Link>.
+            {" "}<span className="link" onClick={() => this.setState({compress: true})}>{i18n.t('intro.compressionOption')}</span>
           </p>
           {!has_spawn && (
             <p>
-              Or you can play the shareware version for free (50MB download).
+              {i18n.t('intro.sharewareOption')}
             </p>
           )}
           <form>
-            <label htmlFor="loadFile" className="startButton">Select MPQ</label>
+            <label htmlFor="loadFile" className="startButton">{i18n.t('ui.selectMPQ')}</label>
             <input accept=".mpq" type="file" id="loadFile" style={{display: "none"}} onChange={this.parseFile}/>
           </form>
-          <div className="startButton" onClick={() => this.start()}>Play Shareware</div>
-          {!!save_names && <div className="startButton" onClick={this.showSaves}>Manage Saves</div>}
+          <div className="startButton" onClick={() => this.start()}>{i18n.t('ui.playShareware')}</div>
+          {!!save_names && <div className="startButton" onClick={this.showSaves}>{i18n.t('ui.manageSaves')}</div>}
         </div>
       );
     }
@@ -753,6 +764,7 @@ class App extends React.Component {
     const {started, error, dropping} = this.state;
     return (
       <div className={classNames("App", {touch: this.touchControls, started, dropping, keyboard: !!this.showKeyboard})} ref={this.setElement}>
+        <LanguageSelector />
         <div className="touch-ui touch-mods">
           <div className={classNames("touch-button", "touch-button-0", {active: this.touchMods[0]})} ref={this.setTouch0}/>
           <div className={classNames("touch-button", "touch-button-1", {active: this.touchMods[1]})} ref={this.setTouch1}/>

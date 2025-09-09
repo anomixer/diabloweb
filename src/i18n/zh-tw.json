@@ -1,0 +1,29 @@
+{
+  "ui": {
+    "loading": "載入中...",
+    "manageSaves": "管理存檔",
+    "uploadSave": "上傳存檔",
+    "back": "返回",
+    "selectMPQ": "選擇 MPQ 檔案",
+    "playShareware": "試玩免費版",
+    "downloadSave": "下載存檔檔案",
+    "deleteSave": "確定要刪除 {fileName} 嗎？",
+    "language": "語言"
+  },
+  "intro": {
+    "description": "這是原版暗黑破壞神遊戲的網頁移植版，基於 GalaXyHaXz 和 devilution 團隊重構的原始碼開發。專案頁面及相關資訊和連結可以在這裡找到",
+    "gameOwnership": "如果您擁有原版遊戲，可以將原版的 DIABDAT.MPQ 檔案拖曳到此頁面上，或點擊下方按鈕開始遊玩。您可以從",
+    "compressionOption": "點擊這裡壓縮 MPQ 檔案，大幅縮減檔案大小。",
+    "sharewareOption": "或者您可以免費試玩共享版本（50MB 下載）。"
+  },
+  "errors": {
+    "errorOccurred": "發生以下錯誤：",
+    "createIssue": "點擊在 GitHub 上建立問題回報",
+    "invalidMPQ": "請選擇一個 MPQ 檔案。如果您從 GoG 下載安裝程式，需要先在 PC 上安裝，然後使用安裝資料夾中的 MPQ 檔案。"
+  },
+  "playerClass": {
+    "0": "戰士",
+    "1": "盜賊",
+    "2": "法師"
+  }
+}
