@@ -41,7 +41,7 @@
     "jest-watch-typeahead": "0.3.0",
     "mini-css-extract-plugin": "0.5.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
-    "peerjs": "^1.0.2",
+    "peerjs": "^1.4.7",
     "pnp-webpack-plugin": "1.2.1",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
@@ -67,8 +67,8 @@
     "workbox-webpack-plugin": "4.2.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start": "node --openssl-legacy-provider scripts/start.js",
+    "build": "node --openssl-legacy-provider scripts/build.js",
     "test": "node scripts/test.js",
     "deploy": "gh-pages -d build",
     "cf-build": "npm install --legacy-peer-deps && npm run build"
@@ -137,16 +137,24 @@
     "presets": [
       "@babel/preset-env",
       "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-class-properties",
+      "@babel/plugin-transform-optional-chaining",
+      "@babel/plugin-transform-nullish-coalescing-operator"
     ]
   },
   "homepage": ".",
   "devDependencies": {
     "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-class-properties": "^7.27.1",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.27.1",
+    "@babel/plugin-transform-optional-chaining": "^7.27.1",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
     "exports-loader": "^0.7.0",
     "gh-pages": "^2.0.1",
-    "node-sass": "^4.14.1",
+    "sass": "^1.77.8",
     "worker-loader": "^2.0.0"
   }
 }
