@@ -1,5 +1,6 @@
 import React from 'react';
 import compress from './compress';
+import i18n from '../i18n';
 
 export default class CompressMpq extends React.Component {
   state = {};
@@ -51,16 +52,16 @@ export default class CompressMpq extends React.Component {
       return (
         <div className="start">
           <p>
-            <a href={url} download="DIABDAT.MPQ">Click here if download doesn't start.</a>
+            <a href={url} download="DIABDAT.MPQ">{i18n.t('compression.downloadPrompt')}</a>
           </p>
-          <div className="startButton" onClick={this.onClose}>Back</div>
+          <div className="startButton" onClick={this.onClose}>{i18n.t('ui.back')}</div>
         </div>
       );
     }
     if (started) {
       return (
         <div className="loading">
-          {(progress && progress.text) || 'Processing...'}
+          {(progress && progress.text) || i18n.t('compression.processing')}
           {progress != null && !!progress.total && (
             <span className="progressBar"><span><span style={{width: `${Math.round(100 * progress.loaded / progress.total)}%`}}/></span></span>
           )}
@@ -70,14 +71,13 @@ export default class CompressMpq extends React.Component {
     return (
       <div className="start">
         <p>
-          You can use this tool to reduce the original MPQ to about half its size. It encodes sounds in MP3 format and uses better compression for regular files.
-          To begin, click the button below or drop the MPQ onto the page.
+          {i18n.t('compression.description')}
         </p>
         <form>
-          <label htmlFor="loadFile" className="startButton">Select MPQ</label>
+          <label htmlFor="loadFile" className="startButton">{i18n.t('ui.selectMPQ')}</label>
           <input accept=".mpq" type="file" id="loadFile" style={{display: "none"}} onChange={this.parseFile}/>
         </form>
-        <div className="startButton" onClick={this.onClose}>Back</div>
+        <div className="startButton" onClick={this.onClose}>{i18n.t('ui.back')}</div>
       </div>
     );
   }
