@@ -741,7 +741,7 @@ class App extends React.Component {
             {i18n.t('intro.description')}{" "}<Link href="https://github.com/d07RiV/diabloweb">https://github.com/d07RiV/diabloweb</Link>
           </p>
           <p>
-            {i18n.t('intro.gameOwnership')}{" "}<Link href="https://www.gog.com/game/diablo">GoG</Link>.
+            {i18n.t('intro.gameOwnership')}{" "}<Link href="https://www.gog.com/game/diablo">GoG</Link> {i18n.t('intro.purchaseComplete')}
             {" "}<span className="link" onClick={() => this.setState({compress: true})}>{i18n.t('intro.compressionOption')}</span>
           </p>
           {!has_spawn && (

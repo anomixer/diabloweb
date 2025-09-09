@@ -13,6 +13,7 @@
   "intro": {
     "description": "This is a web port of the original Diablo game, based on source code reconstructed by GalaXyHaXz and devilution team. The project page with information and links can be found over here",
     "gameOwnership": "If you own the original game, you can drop the original DIABDAT.MPQ onto this page or click the button below to start playing. The game can be purchased from",
+    "purchaseComplete": ".",
     "compressionOption": "Click here to compress the MPQ, greatly reducing its size.",
     "sharewareOption": "Or you can play the shareware version for free (50MB download)."
   },
