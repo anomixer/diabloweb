@@ -31,20 +31,21 @@ export default async function load_spawn(api, fs) {
     const chunks = [];
     let loadedBytes = 0;
     
+    const createProgressHandler = (chunkIndex, currentLoadedBytes) => (e) => {
+      if (api.onProgress) {
+        api.onProgress({
+          text: `Downloading chunk ${chunkIndex + 1}/${numChunks}...`,
+          loaded: currentLoadedBytes + e.loaded,
+          total: totalSize
+        });
+      }
+    };
+    
     for (let i = 0; i < numChunks; i++) {
-      // eslint-disable-next-line no-loop-func
       const chunkResponse = await axios.request({
         url: `/chunks/spawn.mpq.chunk${i.toString().padStart(3, '0')}`,
         responseType: 'arraybuffer',
-        onDownloadProgress: e => {
-          if (api.onProgress) {
-            api.onProgress({
-              text: `Downloading chunk ${i + 1}/${numChunks}...`,
-              loaded: loadedBytes + e.loaded,
-              total: totalSize
-            });
-          }
-        },
+        onDownloadProgress: createProgressHandler(i, loadedBytes),
         headers: {
           'Cache-Control': 'max-age=31536000'
         }
