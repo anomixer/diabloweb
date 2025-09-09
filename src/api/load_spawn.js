@@ -12,22 +12,57 @@ export default async function load_spawn(api, fs) {
     file = null;
   }
   if (!file) {
-    const spawn = await axios.request({
-      url: 'https://github.com/anomixer/diabloweb/releases/download/v1.0.0/spawn.mpq',
-      responseType: 'arraybuffer',
-      onDownloadProgress: e => {
-        if (api.onProgress) {
-          api.onProgress({text: 'Downloading...', loaded: e.loaded, total: e.total || SpawnSizes[1]});
-        }
-      },
+    // First, get metadata
+    const metadataResponse = await axios.request({
+      url: '/chunks/spawn.mpq.meta',
+      responseType: 'json',
       headers: {
         'Cache-Control': 'max-age=31536000'
       }
     });
-    if (!SpawnSizes.includes(spawn.data.byteLength)) {
+    
+    const { totalSize, numChunks } = metadataResponse.data;
+    
+    if (!SpawnSizes.includes(totalSize)) {
       throw Error("Invalid spawn.mpq size. Try clearing cache and refreshing the page.");
     }
-    const data = new Uint8Array(spawn.data);
+    
+    // Download all chunks
+    const chunks = [];
+    let loadedBytes = 0;
+    
+    for (let i = 0; i < numChunks; i++) {
+      // eslint-disable-next-line no-loop-func
+      const chunkResponse = await axios.request({
+        url: `/chunks/spawn.mpq.chunk${i.toString().padStart(3, '0')}`,
+        responseType: 'arraybuffer',
+        onDownloadProgress: e => {
+          if (api.onProgress) {
+            api.onProgress({
+              text: `Downloading chunk ${i + 1}/${numChunks}...`,
+              loaded: loadedBytes + e.loaded,
+              total: totalSize
+            });
+          }
+        },
+        headers: {
+          'Cache-Control': 'max-age=31536000'
+        }
+      });
+      
+      chunks.push(new Uint8Array(chunkResponse.data));
+      loadedBytes += chunkResponse.data.byteLength;
+    }
+    
+    // Reassemble chunks
+    const data = new Uint8Array(totalSize);
+    let offset = 0;
+    
+    for (const chunk of chunks) {
+      data.set(chunk, offset);
+      offset += chunk.length;
+    }
+    
     fs.files.set('spawn.mpq', data);
     fs.update('spawn.mpq', data.slice());
   }
