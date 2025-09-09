@@ -15,7 +15,7 @@
     "gameOwnership": "如果您擁有原版遊戲，可以將原版的 DIABDAT.MPQ 檔案拖曳到此頁面上，或點擊下方按鈕開始遊玩。您可以從",
     "purchaseComplete": "購買遊戲。",
     "compressionOption": "點擊這裡壓縮 MPQ 檔案，大幅縮減檔案大小。",
-    "sharewareOption": "或者您可以免費試玩共享版本（50MB 下載）。"
+    "sharewareOption": "或者您可以免費試玩共享版本（已壓縮成網頁專用版約 25MB）。"
   },
   "errors": {
     "errorOccurred": "發生以下錯誤：",

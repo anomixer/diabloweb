@@ -15,7 +15,7 @@
     "gameOwnership": "If you own the original game, you can drop the original DIABDAT.MPQ onto this page or click the button below to start playing. The game can be purchased from",
     "purchaseComplete": ".",
     "compressionOption": "Click here to compress the MPQ, greatly reducing its size.",
-    "sharewareOption": "Or you can play the shareware version for free (50MB download)."
+    "sharewareOption": "Or you can play the shareware version for free (web-optimized, ~25MB download)."
   },
   "errors": {
     "errorOccurred": "The following error has occurred:",
