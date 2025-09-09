@@ -30,5 +30,11 @@
     "description": "You can use this tool to reduce the original MPQ to about half its size. It encodes sounds in MP3 format and uses better compression for regular files. To begin, click the button below or drop the MPQ onto the page.",
     "processing": "Processing...",
     "downloadPrompt": "Click here if download doesn't start."
+  },
+  "progress": {
+    "loading": "Loading...",
+    "processing": "Processing...",
+    "initializing": "Initializing...",
+    "downloading": "Downloading..."
   }
 }

@@ -58,11 +58,11 @@ function runWorker(data, transfer, progress) {
   });
 }
 
-export default async function compress(mpq, progress) {
-  progress("Loading...");
+export default async function compress(mpq, progress, texts = {loading: 'Loading...', processing: 'Processing...'}) {
+  progress(texts.loading);
   const files = [];
   function updateProgress() {
-    progress("Loading...", files.reduce((sum, {loaded, weight}) => sum + loaded * weight, 0),
+    progress(texts.loading, files.reduce((sum, {loaded, weight}) => sum + loaded * weight, 0),
       files.reduce((sum, {total, weight}) => sum + total * weight, 0));
   }
   const loader = file => e => { file.loaded = e.loaded; updateProgress(); };
@@ -161,7 +161,7 @@ export default async function compress(mpq, progress) {
   await Promise.all(tasks.map(t => t.ready).filter(Boolean));
   const binary = await fBinary.ready;
 
-  progress("Processing...");
+  progress(texts.processing);
 
   for (let task of tasks) {
     if (task.data) {
@@ -179,7 +179,7 @@ export default async function compress(mpq, progress) {
       task.run = runWorker({binary, mpq: task.data, input, offset: task.min, blockSize}, [task.data, input.buffer], value => {
         task.progress = value;
         const sum = tasks.reduce((sum, task) => sum + task.progress, 0);
-        progress("Processing...", sum, numFiles);
+        progress(texts.processing, sum, numFiles);
       }).then(res => task.result = res);
     }
   }

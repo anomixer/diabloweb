@@ -33,8 +33,9 @@ export default async function load_spawn(api, fs) {
     
     const createProgressHandler = (chunkIndex, currentLoadedBytes) => (e) => {
       if (api.onProgress) {
+        const downloadingText = api.texts ? api.texts.downloading : 'Downloading';
         api.onProgress({
-          text: `Downloading chunk ${chunkIndex + 1}/${numChunks}...`,
+          text: `${downloadingText} chunk ${chunkIndex + 1}/${numChunks}...`,
           loaded: currentLoadedBytes + e.loaded,
           total: totalSize
         });

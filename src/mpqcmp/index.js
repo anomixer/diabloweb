@@ -42,7 +42,11 @@ export default class CompressMpq extends React.Component {
 
   start(file) {
     this.setState({started: true});
-    compress(file, (text, loaded, total) => this.onProgress({text, loaded, total}))
+    const texts = {
+      loading: i18n.t('progress.loading'),
+      processing: i18n.t('progress.processing')
+    };
+    compress(file, (text, loaded, total) => this.onProgress({text, loaded, total}), texts)
       .then(this.onDone, e => this.onError(e.message, e.stack));
   }
 

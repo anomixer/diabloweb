@@ -2,6 +2,7 @@ import Worker from './game.worker.js';
 import init_sound from './sound';
 import load_spawn from './load_spawn';
 import webrtc_open from './webrtc';
+import i18n from '../i18n';
 
 function onRender(api, ctx, {bitmap, images, text, clip, belt}) {
   if (bitmap) {
@@ -53,6 +54,10 @@ function testOffscreen() {
 async function do_load_game(api, audio, mpq, spawn) {
   const fs = await api.fs;
   if (spawn && !mpq) {
+    // Pass translated texts to load_spawn through api object
+    api.texts = {
+      downloading: i18n.t('progress.downloading')
+    };
     await load_spawn(api, fs);
   }
 
@@ -128,7 +133,11 @@ async function do_load_game(api, audio, mpq, spawn) {
       for (let [, file] of fs.files) {
         transfer.push(file.buffer);
       }
-      worker.postMessage({action: "init", files: fs.files, mpq, spawn, offscreen}, transfer);
+      const texts = {
+        loading: i18n.t('progress.loading'),
+        initializing: i18n.t('progress.initializing')
+      };
+      worker.postMessage({action: "init", files: fs.files, mpq, spawn, offscreen, texts}, transfer);
       setInterval(() => {
         if (packetQueue.length) {
           worker.postMessage({action: "packetBatch", batch: packetQueue}, packetQueue);

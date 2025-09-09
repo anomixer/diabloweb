@@ -30,5 +30,11 @@
     "description": "您可以使用此工具將原始 MPQ 檔案縮小到約一半大小。它將音效編碼為 MP3 格式，並對一般檔案使用更好的壓縮演算法。要開始使用，請點擊下方按鈕或將 MPQ 檔案拖曳到頁面上。",
     "processing": "處理中...",
     "downloadPrompt": "如果下載沒有自動開始，請點擊這裡。"
+  },
+  "progress": {
+    "loading": "載入中...",
+    "processing": "處理中...",
+    "initializing": "初始化中...",
+    "downloading": "下載中..."
   }
 }

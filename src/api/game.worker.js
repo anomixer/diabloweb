@@ -360,7 +360,7 @@ async function initWasm(spawn, progress) {
   return result;
 }
 
-async function init_game(mpq, spawn, offscreen) {
+async function init_game(mpq, spawn, offscreen, texts = {loading: 'Loading...', initializing: 'Initializing...'}) {
   is_spawn = spawn;
   if (offscreen) {
     canvas = new OffscreenCanvas(640, 480);
@@ -379,11 +379,11 @@ async function init_game(mpq, spawn, offscreen) {
     }
   }
 
-  progress("Loading...");
+  progress(texts.loading);
   let mpqLoaded = 0, mpqTotal = (mpq ? mpq.size : 0), wasmLoaded = 0, wasmTotal = (spawn ? SpawnSize : DiabloSize);
   const wasmWeight = 5;
   function updateProgress() {
-    progress("Loading...", mpqLoaded + wasmLoaded * wasmWeight, mpqTotal + wasmTotal * wasmWeight);
+    progress(texts.loading, mpqLoaded + wasmLoaded * wasmWeight, mpqTotal + wasmTotal * wasmWeight);
   }
   const loadWasm = initWasm(spawn, e => {
     wasmLoaded = Math.min(e.loaded, wasmTotal);
@@ -399,7 +399,7 @@ async function init_game(mpq, spawn, offscreen) {
     files.set(spawn ? 'spawn.mpq' : 'diabdat.mpq', new Uint8Array(mpq));
   }
 
-  progress("Initializing...");
+  progress(texts.initializing);
 
   const vers = process.env.VERSION.match(/(\d+)\.(\d+)\.(\d+)/);
 
@@ -415,7 +415,7 @@ worker.addEventListener("message", ({data}) => {
   switch (data.action) {
   case "init":
     files = data.files;
-    init_game(data.mpq, data.spawn, data.offscreen).then(
+    init_game(data.mpq, data.spawn, data.offscreen, data.texts).then(
       () => worker.postMessage({action: "loaded"}),
       e => onError(e, "failed"));
     break;

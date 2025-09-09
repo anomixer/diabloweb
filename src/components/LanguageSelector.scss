@@ -61,11 +61,7 @@
   }
 }
 
-// 在遊戲開始後隱藏語言選擇器，但仍保持可用
+// 在遊戲開始後完全隱藏語言選擇器
 .App.started .language-selector {
-  opacity: 0.7;
-  
-  &:hover {
-    opacity: 1;
-  }
+  display: none;
 }
