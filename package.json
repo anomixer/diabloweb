@@ -138,7 +138,7 @@
       "@babel/preset-react"
     ]
   },
-  "homepage": "https://d07riv.github.io/diabloweb",
+  "homepage": ".",
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",

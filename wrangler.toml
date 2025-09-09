@@ -1,0 +1,24 @@
+name = "diabloweb"
+compatibility_date = "2023-10-30"
+
+[env.production]
+account_id = "your-account-id"
+
+# Pages configuration
+[env.production.pages_build_output_dir]
+output_dir = "build"
+
+# Environment variables (if needed)
+[env.production.vars]
+NODE_ENV = "production"
+
+# Headers for better caching of static assets
+[[env.production.rules]]
+match = "*.wasm"
+cache_level = "cache_everything"
+edge_ttl = 31536000  # 1 year
+
+[[env.production.rules]]
+match = "*.jscc"
+cache_level = "cache_everything"
+edge_ttl = 31536000  # 1 year
