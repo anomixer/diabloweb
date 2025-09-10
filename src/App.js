@@ -738,7 +738,7 @@ class App extends React.Component {
       return (
         <div className="start">
           <p>
-            {i18n.t('intro.description')}{" "}<Link href="https://github.com/d07RiV/diabloweb">https://github.com/d07RiV/diabloweb</Link>
+            {i18n.t('intro.description')}{" "}<Link href="https://github.com/anomixer/diabloweb">https://github.com/anomixer/diabloweb</Link>
           </p>
           <p>
             {i18n.t('intro.gameOwnership')}{" "}<Link href="https://www.gog.com/game/diablo">GoG</Link> {i18n.t('intro.purchaseComplete')}
