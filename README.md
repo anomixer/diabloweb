@@ -1,6 +1,10 @@
 ## Diablo 1 for web browsers!
 
-**[🇹🇼 繁體中文說明文件](readme.zh-tw.md)**
+**🌐 Multi-language Documentation:**
+- **[🇹🇼 繁體中文](readme.zh-tw.md)** (Traditional Chinese)
+- **[🇨🇳 简体中文](readme.zh-cn.md)** (Simplified Chinese)
+- **[🇯🇵 日本語](readme.ja.md)** (Japanese)
+- **[🇰🇷 한국어](readme.ko.md)** (Korean)
 
 This project is based on https://github.com/diasurgical/devilution.
 

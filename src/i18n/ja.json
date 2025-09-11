@@ -1,0 +1,41 @@
+{
+  "ui": {
+    "loading": "読み込み中...",
+    "manageSaves": "セーブデータ管理",
+    "uploadSave": "セーブデータアップロード",
+    "back": "戻る",
+    "selectMPQ": "MPQファイルを選択",
+    "playShareware": "無料版をプレイ",
+    "downloadSave": "セーブファイルをダウンロード",
+    "deleteSave": "{fileName} を削除してもよろしいですか？",
+    "language": "言語"
+  },
+  "intro": {
+    "description": "これはオリジナルのディアブロゲームのウェブ移植版で、GalaXyHaXzとdevilutionチームによって再構築されたソースコードを基に開発されています。プロジェクトページと情報・リンクはこちらで確認できます",
+    "gameOwnership": "オリジナルゲームをお持ちの場合は、オリジナルのDIABDAT.MPQファイルをこのページにドラッグ＆ドロップするか、下のボタンをクリックしてプレイを開始できます。ゲームは",
+    "purchaseComplete": "から購入できます。",
+    "compressionOption": "こちらをクリックしてMPQファイルを圧縮し、ファイルサイズを大幅に削減できます。",
+    "sharewareOption": "または、無料のシェアウェア版をプレイできます（ウェブ最適化版、約25MBダウンロード）。"
+  },
+  "errors": {
+    "errorOccurred": "次のエラーが発生しました：",
+    "createIssue": "GitHubでissueを作成するにはクリック",
+    "invalidMPQ": "MPQファイルを選択してください。GoGからインストーラーをダウンロードした場合は、PCにインストールしてからインストールフォルダのMPQファイルを使用する必要があります。"
+  },
+  "playerClass": {
+    "0": "ウォリアー",
+    "1": "ローグ",
+    "2": "ソーサラー"
+  },
+  "compression": {
+    "description": "このツールを使用して、オリジナルのMPQファイルを約半分のサイズに縮小できます。音声をMP3形式でエンコードし、通常のファイルにはより良い圧縮アルゴリズムを使用します。開始するには、下のボタンをクリックするか、MPQファイルをページにドラッグしてください。",
+    "processing": "処理中...",
+    "downloadPrompt": "ダウンロードが開始されない場合は、こちらをクリックしてください。"
+  },
+  "progress": {
+    "loading": "読み込み中...",
+    "processing": "処理中...",
+    "initializing": "初期化中...",
+    "downloading": "ダウンロード中..."
+  }
+}

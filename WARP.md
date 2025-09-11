@@ -64,6 +64,16 @@ src/
 ├── App.js              # Main React application component  
 ├── index.js            # Application entry point
 ├── fs.js               # Virtual file system (IndexedDB)
+├── i18n/               # Internationalization system
+│   ├── index.js        # i18n core logic with language detection
+│   ├── en.json         # English translations
+│   ├── zh-tw.json      # Traditional Chinese translations
+│   ├── zh-cn.json      # Simplified Chinese translations
+│   ├── ja.json         # Japanese translations
+│   └── ko.json         # Korean translations
+├── components/
+│   ├── LanguageSelector.js    # Language switcher component
+│   └── LanguageSelector.scss  # Language selector styles
 ├── api/
 │   ├── game.worker.js  # WebAssembly game engine worker
 │   ├── loader.js       # Game initialization and worker management
@@ -122,6 +132,78 @@ wrangler pages deploy build --project-name diabloweb
 原有的 GitHub Pages 部署仍然有效：
 ```bash
 npm run deploy  # 部署到 GitHub Pages
+```
+
+## Internationalization (i18n)
+
+### Supported Languages
+The project supports 5 languages with complete UI translation:
+- 🇺🇸 **English** - Default fallback language
+- 🇹🇼 **繁體中文** - Traditional Chinese 
+- 🇨🇳 **简体中文** - Simplified Chinese
+- 🇯🇵 **日本語** - Japanese
+- 🇰🇷 **한국어** - Korean
+
+### Language System Architecture
+
+**Auto-detection**: Browser language automatically detected on first visit
+- Chinese users: Detects Traditional vs Simplified (defaults to Simplified)
+- Japanese/Korean users: Auto-detects respective languages
+- Fallback to English for unsupported languages
+
+**Persistent Storage**: User language preference saved to localStorage as `diablo-language`
+
+**Real-time Switching**: Language can be changed via dropdown in top-right corner without page reload
+
+### Adding New Languages
+
+1. **Create translation file**: Add `src/i18n/{language-code}.json` with all UI strings
+2. **Update i18n index**: Import new translations in `src/i18n/index.js`
+3. **Add to language list**: Include in `getAvailableLanguages()` method
+4. **Create documentation**: Add `readme.{language-code}.md` file
+5. **Update main README**: Link to new documentation in main README.md
+
+### Translation Keys Structure
+```json
+{
+  "ui": {              // Interface elements
+    "loading": "...",
+    "language": "..."
+  },
+  "intro": {           // Welcome/intro text
+    "description": "..."
+  },
+  "errors": {          // Error messages
+    "errorOccurred": "..."
+  },
+  "playerClass": {     // Character classes
+    "0": "Warrior",
+    "1": "Rogue",
+    "2": "Sorcerer"
+  },
+  "compression": {},   // File compression UI
+  "progress": {}       // Loading states
+}
+```
+
+### Usage in Components
+```javascript
+import i18n from '../i18n';
+
+// Simple translation
+const text = i18n.t('ui.loading');
+
+// With parameters
+const message = i18n.t('ui.deleteSave', { fileName: 'game.sv' });
+
+// Listen for language changes
+useEffect(() => {
+  const handleLanguageChange = (newLang) => {
+    // Update component state
+  };
+  i18n.addListener(handleLanguageChange);
+  return () => i18n.removeListener(handleLanguageChange);
+}, []);
 ```
 
 ## Development Workflows

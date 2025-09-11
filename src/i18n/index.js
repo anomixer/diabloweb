@@ -1,9 +1,15 @@
 import enTranslations from './en.json';
 import zhTwTranslations from './zh-tw.json';
+import zhCnTranslations from './zh-cn.json';
+import jaTranslations from './ja.json';
+import koTranslations from './ko.json';
 
 const translations = {
   'en': enTranslations,
-  'zh-tw': zhTwTranslations
+  'zh-tw': zhTwTranslations,
+  'zh-cn': zhCnTranslations,
+  'ja': jaTranslations,
+  'ko': koTranslations
 };
 
 class I18n {
@@ -24,7 +30,15 @@ class I18n {
     if (browserLang.startsWith('zh')) {
       if (browserLang.includes('TW') || browserLang.includes('HK') || browserLang.includes('MO')) {
         return 'zh-tw';
+      } else if (browserLang.includes('CN') || browserLang.includes('SG')) {
+        return 'zh-cn';
       }
+      // 預設為簡體中文
+      return 'zh-cn';
+    } else if (browserLang.startsWith('ja')) {
+      return 'ja';
+    } else if (browserLang.startsWith('ko')) {
+      return 'ko';
     }
     
     return 'en';
@@ -45,7 +59,10 @@ class I18n {
   getAvailableLanguages() {
     return [
       { code: 'en', name: 'English' },
-      { code: 'zh-tw', name: '繁體中文' }
+      { code: 'zh-tw', name: '繁體中文' },
+      { code: 'zh-cn', name: '简体中文' },
+      { code: 'ja', name: '日本語' },
+      { code: 'ko', name: '한국어' }
     ];
   }
 

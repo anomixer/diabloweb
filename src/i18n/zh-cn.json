@@ -1,0 +1,41 @@
+{
+  "ui": {
+    "loading": "加载中...",
+    "manageSaves": "管理存档",
+    "uploadSave": "上传存档",
+    "back": "返回",
+    "selectMPQ": "选择 MPQ 文件",
+    "playShareware": "试玩免费版",
+    "downloadSave": "下载存档文件",
+    "deleteSave": "确定要删除 {fileName} 吗？",
+    "language": "语言"
+  },
+  "intro": {
+    "description": "这是原版暗黑破坏神游戏的网页移植版，基于 GalaXyHaXz 和 devilution 团队重构的源代码开发。项目页面及相关信息和链接可以在这里找到",
+    "gameOwnership": "如果您拥有原版游戏，可以将原版的 DIABDAT.MPQ 文件拖拽到此页面上，或点击下方按钮开始游玩。您可以从",
+    "purchaseComplete": "购买游戏。",
+    "compressionOption": "点击这里压缩 MPQ 文件，大幅缩减文件大小。",
+    "sharewareOption": "或者您可以免费试玩共享版本（已压缩成网页专用版约 25MB）。"
+  },
+  "errors": {
+    "errorOccurred": "发生以下错误：",
+    "createIssue": "点击在 GitHub 上创建问题报告",
+    "invalidMPQ": "请选择一个 MPQ 文件。如果您从 GoG 下载安装程序，需要先在 PC 上安装，然后使用安装文件夹中的 MPQ 文件。"
+  },
+  "playerClass": {
+    "0": "战士",
+    "1": "盗贼",
+    "2": "法师"
+  },
+  "compression": {
+    "description": "您可以使用此工具将原始 MPQ 文件缩小到约一半大小。它将音效编码为 MP3 格式，并对一般文件使用更好的压缩算法。要开始使用，请点击下方按钮或将 MPQ 文件拖拽到页面上。",
+    "processing": "处理中...",
+    "downloadPrompt": "如果下载没有自动开始，请点击这里。"
+  },
+  "progress": {
+    "loading": "加载中...",
+    "processing": "处理中...",
+    "initializing": "初始化中...",
+    "downloading": "下载中..."
+  }
+}
