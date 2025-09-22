@@ -1,0 +1,31 @@
+{
+  "files": {
+    "static/js/0.c2f5b5cc.chunk.js": "./static/js/0.c2f5b5cc.chunk.js",
+    "static/js/0.c2f5b5cc.chunk.js.map": "./static/js/0.c2f5b5cc.chunk.js.map",
+    "main.css": "./static/css/main.30b8ee7b.chunk.css",
+    "main.js": "./static/js/main.de01dbff.chunk.js",
+    "main.js.map": "./static/js/main.de01dbff.chunk.js.map",
+    "runtime~main.js": "./static/js/runtime~main.1545a98e.js",
+    "runtime~main.js.map": "./static/js/runtime~main.1545a98e.js.map",
+    "runtime~storage.js": "./static/js/runtime~storage.033eb183.js",
+    "runtime~storage.js.map": "./static/js/runtime~storage.033eb183.js.map",
+    "storage.js": "./static/js/storage.4de50383.chunk.js",
+    "storage.js.map": "./static/js/storage.4de50383.chunk.js.map",
+    "static/js/5.63b04a58.chunk.js": "./static/js/5.63b04a58.chunk.js",
+    "static/js/5.63b04a58.chunk.js.map": "./static/js/5.63b04a58.chunk.js.map",
+    "2384231be07b27379035.worker.js": "./2384231be07b27379035.worker.js",
+    "2384231be07b27379035.worker.js.map": "./2384231be07b27379035.worker.js.map",
+    "944f146ef3ad57d4dff1.worker.js": "./944f146ef3ad57d4dff1.worker.js",
+    "944f146ef3ad57d4dff1.worker.js.map": "./944f146ef3ad57d4dff1.worker.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.39ee4857d3cff321c5f0b8f98db9d292.js": "./precache-manifest.39ee4857d3cff321c5f0b8f98db9d292.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.30b8ee7b.chunk.css.map": "./static/css/main.30b8ee7b.chunk.css.map",
+    "static/media/Diablo.wasm": "./static/media/Diablo.570bd59a.wasm",
+    "static/media/DiabloSpawn.wasm": "./static/media/DiabloSpawn.9c2373b2.wasm",
+    "static/media/ListFile.txt": "./static/media/ListFile.b370797d.txt",
+    "static/media/MpqCmp.wasm": "./static/media/MpqCmp.8aa3c6dc.wasm",
+    "static/media/App.scss": "./static/media/shift.b40e4a63.svg",
+    "storage.html": "./storage.html"
+  }
+}
