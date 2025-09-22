@@ -1,0 +1,41 @@
+{
+  "ui": {
+    "loading": "Cargando...",
+    "manageSaves": "Gestionar Partidas",
+    "uploadSave": "Subir Partida",
+    "back": "Atrás",
+    "selectMPQ": "Seleccionar MPQ",
+    "playShareware": "Jugar Shareware",
+    "downloadSave": "Descargar archivo de guardado",
+    "deleteSave": "¿Estás seguro de que quieres eliminar {fileName}?",
+    "language": "Idioma"
+  },
+  "intro": {
+    "description": "Esta es una adaptación web del juego original Diablo, basada en el código fuente reconstruido por GalaXyHaXz y el equipo de devilution. La página del proyecto con información y enlaces se puede encontrar aquí",
+    "gameOwnership": "Si posees el juego original, puedes arrastrar el DIABDAT.MPQ original a esta página o hacer clic en el botón de abajo para empezar a jugar. El juego se puede comprar en",
+    "purchaseComplete": ".",
+    "compressionOption": "Haz clic aquí para comprimir el MPQ, reduciendo considerablemente su tamaño.",
+    "sharewareOption": "O puedes jugar la versión shareware gratis (optimizada para web, descarga de ~25MB)."
+  },
+  "errors": {
+    "errorOccurred": "Ha ocurrido el siguiente error:",
+    "createIssue": "Haz clic para crear un issue en GitHub",
+    "invalidMPQ": "Por favor selecciona un archivo MPQ. Si descargaste el instalador de GoG, necesitarás instalarlo en PC y usar el archivo MPQ de la carpeta de instalación."
+  },
+  "playerClass": {
+    "0": "Guerrero",
+    "1": "Pícaro",
+    "2": "Hechicero"
+  },
+  "compression": {
+    "description": "Puedes usar esta herramienta para reducir el MPQ original a aproximadamente la mitad de su tamaño. Codifica los sonidos en formato MP3 y usa mejor compresión para archivos regulares. Para empezar, haz clic en el botón de abajo o arrastra el MPQ a la página.",
+    "processing": "Procesando...",
+    "downloadPrompt": "Haz clic aquí si la descarga no comienza."
+  },
+  "progress": {
+    "loading": "Cargando...",
+    "processing": "Procesando...",
+    "initializing": "Inicializando...",
+    "downloading": "Descargando..."
+  }
+}

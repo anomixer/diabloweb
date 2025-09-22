@@ -5,6 +5,14 @@
 - **[🇨🇳 简体中文](readme.zh-cn.md)** (Simplified Chinese)
 - **[🇯🇵 日本語](readme.ja.md)** (Japanese)
 - **[🇰🇷 한국어](readme.ko.md)** (Korean)
+- **[🇩🇪 Deutsch](readme.de.md)** (German)
+- **[🇪🇸 Español](readme.es.md)** (Spanish)
+- **[🇫🇷 Français](readme.fr.md)** (French)
+- **[🇮🇹 Italiano](readme.it.md)** (Italian)
+- **[🇳🇱 Nederlands](readme.nl.md)** (Dutch)
+- **[🇵🇹 Português](readme.pt.md)** (Portuguese)
+- **[🇷🇺 Русский](readme.ru.md)** (Russian)
+- **[🇸🇪 Svenska](readme.sv.md)** (Swedish)
 
 This project is based on https://github.com/diasurgical/devilution.
 

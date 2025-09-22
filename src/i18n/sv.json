@@ -1,0 +1,41 @@
+{
+  "ui": {
+    "loading": "Laddar...",
+    "manageSaves": "Hantera Sparfiler",
+    "uploadSave": "Ladda upp Sparfil",
+    "back": "Tillbaka",
+    "selectMPQ": "Välj MPQ",
+    "playShareware": "Spela Shareware",
+    "downloadSave": "Ladda ner sparfil",
+    "deleteSave": "Är du säker på att du vill radera {fileName}?",
+    "language": "Språk"
+  },
+  "intro": {
+    "description": "Detta är en webbport av det ursprungliga Diablo-spelet, baserat på källkod rekonstruerad av GalaXyHaXz och devilution-teamet. Projektsidan med information och länkar kan hittas här",
+    "gameOwnership": "Om du äger det ursprungliga spelet kan du dra den ursprungliga DIABDAT.MPQ till denna sida eller klicka på knappen nedan för att börja spela. Spelet kan köpas från",
+    "purchaseComplete": ".",
+    "compressionOption": "Klicka här för att komprimera MPQ:n, vilket avsevärt minskar dess storlek.",
+    "sharewareOption": "Eller så kan du spela shareware-versionen gratis (weboptimerad, ~25MB nedladdning)."
+  },
+  "errors": {
+    "errorOccurred": "Följande fel har uppstått:",
+    "createIssue": "Klicka för att skapa ett issue på GitHub",
+    "invalidMPQ": "Välj en MPQ-fil. Om du laddade ner installationsprogrammet från GoG måste du installera det på PC och använda MPQ-filen från installationsmappen."
+  },
+  "playerClass": {
+    "0": "Krigare",
+    "1": "Skurk",
+    "2": "Trollkarl"
+  },
+  "compression": {
+    "description": "Du kan använda detta verktyg för att minska den ursprungliga MPQ:n till ungefär hälften av sin storlek. Det kodar ljud i MP3-format och använder bättre komprimering för vanliga filer. För att börja, klicka på knappen nedan eller dra MPQ:n till sidan.",
+    "processing": "Bearbetar...",
+    "downloadPrompt": "Klicka här om nedladdningen inte startar."
+  },
+  "progress": {
+    "loading": "Laddar...",
+    "processing": "Bearbetar...",
+    "initializing": "Initierar...",
+    "downloading": "Laddar ner..."
+  }
+}

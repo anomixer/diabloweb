@@ -1,0 +1,41 @@
+{
+  "ui": {
+    "loading": "Laden...",
+    "manageSaves": "Saves Beheren",
+    "uploadSave": "Save Uploaden",
+    "back": "Terug",
+    "selectMPQ": "Selecteer MPQ",
+    "playShareware": "Speel Shareware",
+    "downloadSave": "Save-bestand downloaden",
+    "deleteSave": "Weet je zeker dat je {fileName} wilt verwijderen?",
+    "language": "Taal"
+  },
+  "intro": {
+    "description": "Dit is een webversie van het originele Diablo-spel, gebaseerd op de broncode gereconstrueerd door GalaXyHaXz en het devilution-team. De projectpagina met informatie en links kan hier gevonden worden",
+    "gameOwnership": "Als je het originele spel bezit, kun je het originele DIABDAT.MPQ-bestand naar deze pagina slepen of op de knop hieronder klikken om te beginnen met spelen. Het spel kan gekocht worden bij",
+    "purchaseComplete": ".",
+    "compressionOption": "Klik hier om de MPQ te comprimeren, wat de bestandsgrootte aanzienlijk reduceert.",
+    "sharewareOption": "Of je kunt gratis de shareware-versie spelen (geoptimaliseerd voor web, ~25MB download)."
+  },
+  "errors": {
+    "errorOccurred": "De volgende fout is opgetreden:",
+    "createIssue": "Klik om een issue aan te maken op GitHub",
+    "invalidMPQ": "Selecteer een MPQ-bestand. Als je de installer van GoG hebt gedownload, moet je deze op de PC installeren en het MPQ-bestand uit de installatiemap gebruiken."
+  },
+  "playerClass": {
+    "0": "Krijger",
+    "1": "Schurk",
+    "2": "Tovenaar"
+  },
+  "compression": {
+    "description": "Je kunt deze tool gebruiken om de originele MPQ te verkleinen tot ongeveer de helft van de grootte. Het codeert geluiden in MP3-formaat en gebruikt betere compressie voor normale bestanden. Om te beginnen, klik op de knop hieronder of sleep de MPQ naar de pagina.",
+    "processing": "Verwerken...",
+    "downloadPrompt": "Klik hier als de download niet start."
+  },
+  "progress": {
+    "loading": "Laden...",
+    "processing": "Verwerken...",
+    "initializing": "Initialiseren...",
+    "downloading": "Downloaden..."
+  }
+}

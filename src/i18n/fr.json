@@ -1,0 +1,41 @@
+{
+  "ui": {
+    "loading": "Chargement...",
+    "manageSaves": "Gérer les Sauvegardes",
+    "uploadSave": "Téléverser une Sauvegarde",
+    "back": "Retour",
+    "selectMPQ": "Sélectionner MPQ",
+    "playShareware": "Jouer Shareware",
+    "downloadSave": "Télécharger le fichier de sauvegarde",
+    "deleteSave": "Êtes-vous sûr de vouloir supprimer {fileName} ?",
+    "language": "Langue"
+  },
+  "intro": {
+    "description": "Ceci est un portage web du jeu Diablo original, basé sur le code source reconstruit par GalaXyHaXz et l'équipe devilution. La page du projet avec les informations et liens peut être trouvée ici",
+    "gameOwnership": "Si vous possédez le jeu original, vous pouvez faire glisser le DIABDAT.MPQ original sur cette page ou cliquer sur le bouton ci-dessous pour commencer à jouer. Le jeu peut être acheté sur",
+    "purchaseComplete": ".",
+    "compressionOption": "Cliquez ici pour comprimer le MPQ, réduisant considérablement sa taille.",
+    "sharewareOption": "Ou vous pouvez jouer gratuitement à la version shareware (optimisée web, téléchargement ~25MB)."
+  },
+  "errors": {
+    "errorOccurred": "L'erreur suivante s'est produite :",
+    "createIssue": "Cliquez pour créer un problème sur GitHub",
+    "invalidMPQ": "Veuillez sélectionner un fichier MPQ. Si vous avez téléchargé l'installateur de GoG, vous devrez l'installer sur PC et utiliser le fichier MPQ du dossier d'installation."
+  },
+  "playerClass": {
+    "0": "Guerrier",
+    "1": "Voleur",
+    "2": "Sorcier"
+  },
+  "compression": {
+    "description": "Vous pouvez utiliser cet outil pour réduire le MPQ original à environ la moitié de sa taille. Il encode les sons au format MP3 et utilise une meilleure compression pour les fichiers normaux. Pour commencer, cliquez sur le bouton ci-dessous ou faites glisser le MPQ sur la page.",
+    "processing": "Traitement...",
+    "downloadPrompt": "Cliquez ici si le téléchargement ne commence pas."
+  },
+  "progress": {
+    "loading": "Chargement...",
+    "processing": "Traitement...",
+    "initializing": "Initialisation...",
+    "downloading": "Téléchargement..."
+  }
+}

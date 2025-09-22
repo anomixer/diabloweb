@@ -1,0 +1,41 @@
+{
+  "ui": {
+    "loading": "Laden...",
+    "manageSaves": "Spielstände verwalten",
+    "uploadSave": "Spielstand hochladen",
+    "back": "Zurück",
+    "selectMPQ": "MPQ-Datei auswählen",
+    "playShareware": "Shareware spielen",
+    "downloadSave": "Spielstand herunterladen",
+    "deleteSave": "Sind Sie sicher, dass Sie {fileName} löschen möchten?",
+    "language": "Sprache"
+  },
+  "intro": {
+    "description": "Dies ist eine Webportierung des ursprünglichen Diablo-Spiels, basierend auf dem von GalaXyHaXz und dem devilution-Team rekonstruierten Quellcode. Die Projektseite mit Informationen und Links finden Sie hier",
+    "gameOwnership": "Wenn Sie das ursprüngliche Spiel besitzen, können Sie die ursprüngliche DIABDAT.MPQ-Datei auf diese Seite ziehen oder auf die Schaltfläche unten klicken, um zu spielen. Das Spiel kann erworben werden bei",
+    "purchaseComplete": ".",
+    "compressionOption": "Klicken Sie hier, um die MPQ zu komprimieren und die Dateigröße erheblich zu reduzieren.",
+    "sharewareOption": "Oder Sie können die Shareware-Version kostenlos spielen (weboptimiert, ~25MB Download)."
+  },
+  "errors": {
+    "errorOccurred": "Folgender Fehler ist aufgetreten:",
+    "createIssue": "Klicken Sie hier, um ein Issue auf GitHub zu erstellen",
+    "invalidMPQ": "Bitte wählen Sie eine MPQ-Datei aus. Wenn Sie den Installer von GoG heruntergeladen haben, müssen Sie ihn auf dem PC installieren und die MPQ-Datei aus dem Installationsordner verwenden."
+  },
+  "playerClass": {
+    "0": "Krieger",
+    "1": "Schurke",
+    "2": "Zauberer"
+  },
+  "compression": {
+    "description": "Sie können dieses Tool verwenden, um die ursprüngliche MPQ auf etwa die Hälfte ihrer Größe zu reduzieren. Es kodiert Sounds im MP3-Format und verwendet bessere Kompression für normale Dateien. Klicken Sie unten auf die Schaltfläche oder ziehen Sie die MPQ auf die Seite, um zu beginnen.",
+    "processing": "Verarbeitung...",
+    "downloadPrompt": "Klicken Sie hier, wenn der Download nicht startet."
+  },
+  "progress": {
+    "loading": "Laden...",
+    "processing": "Verarbeitung...",
+    "initializing": "Initialisierung...",
+    "downloading": "Herunterladen..."
+  }
+}

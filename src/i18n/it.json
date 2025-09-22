@@ -1,0 +1,41 @@
+{
+  "ui": {
+    "loading": "Caricamento...",
+    "manageSaves": "Gestisci Salvataggi",
+    "uploadSave": "Carica Salvataggio",
+    "back": "Indietro",
+    "selectMPQ": "Seleziona MPQ",
+    "playShareware": "Gioca Shareware",
+    "downloadSave": "Scarica file di salvataggio",
+    "deleteSave": "Sei sicuro di voler eliminare {fileName}?",
+    "language": "Lingua"
+  },
+  "intro": {
+    "description": "Questo è un porting web del gioco Diablo originale, basato sul codice sorgente ricostruito da GalaXyHaXz e dal team devilution. La pagina del progetto con informazioni e link può essere trovata qui",
+    "gameOwnership": "Se possiedi il gioco originale, puoi trascinare l'originale DIABDAT.MPQ su questa pagina o cliccare il pulsante qui sotto per iniziare a giocare. Il gioco può essere acquistato da",
+    "purchaseComplete": ".",
+    "compressionOption": "Clicca qui per comprimere l'MPQ, riducendo notevolmente le sue dimensioni.",
+    "sharewareOption": "Oppure puoi giocare gratuitamente alla versione shareware (ottimizzata per web, download ~25MB)."
+  },
+  "errors": {
+    "errorOccurred": "Si è verificato il seguente errore:",
+    "createIssue": "Clicca per creare un issue su GitHub",
+    "invalidMPQ": "Seleziona un file MPQ. Se hai scaricato l'installer da GoG, dovrai installarlo su PC e utilizzare il file MPQ dalla cartella di installazione."
+  },
+  "playerClass": {
+    "0": "Guerriero",
+    "1": "Ladro",
+    "2": "Stregone"
+  },
+  "compression": {
+    "description": "Puoi usare questo strumento per ridurre l'MPQ originale a circa la metà delle sue dimensioni. Codifica i suoni in formato MP3 e usa una migliore compressione per i file normali. Per iniziare, clicca il pulsante qui sotto o trascina l'MPQ sulla pagina.",
+    "processing": "Elaborazione...",
+    "downloadPrompt": "Clicca qui se il download non inizia."
+  },
+  "progress": {
+    "loading": "Caricamento...",
+    "processing": "Elaborazione...",
+    "initializing": "Inizializzazione...",
+    "downloading": "Scaricamento..."
+  }
+}

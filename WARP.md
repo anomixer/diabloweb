@@ -70,7 +70,15 @@ src/
 │   ├── zh-tw.json      # Traditional Chinese translations
 │   ├── zh-cn.json      # Simplified Chinese translations
 │   ├── ja.json         # Japanese translations
-│   └── ko.json         # Korean translations
+│   ├── ko.json         # Korean translations
+│   ├── de.json         # German translations
+│   ├── es.json         # Spanish translations
+│   ├── fr.json         # French translations
+│   ├── it.json         # Italian translations
+│   ├── nl.json         # Dutch translations
+│   ├── pt.json         # Portuguese translations
+│   ├── ru.json         # Russian translations
+│   └── sv.json         # Swedish translations
 ├── components/
 │   ├── LanguageSelector.js    # Language switcher component
 │   └── LanguageSelector.scss  # Language selector styles
@@ -137,18 +145,27 @@ npm run deploy  # 部署到 GitHub Pages
 ## Internationalization (i18n)
 
 ### Supported Languages
-The project supports 5 languages with complete UI translation:
+The project supports 13 languages with complete UI translation:
 - 🇺🇸 **English** - Default fallback language
 - 🇹🇼 **繁體中文** - Traditional Chinese 
 - 🇨🇳 **简体中文** - Simplified Chinese
 - 🇯🇵 **日本語** - Japanese
 - 🇰🇷 **한국어** - Korean
+- 🇩🇪 **Deutsch** - German
+- 🇪🇸 **Español** - Spanish
+- 🇫🇷 **Français** - French
+- 🇮🇹 **Italiano** - Italian
+- 🇳🇱 **Nederlands** - Dutch
+- 🇵🇹 **Português** - Portuguese
+- 🇷🇺 **Русский** - Russian
+- 🇸🇪 **Svenska** - Swedish
 
 ### Language System Architecture
 
 **Auto-detection**: Browser language automatically detected on first visit
 - Chinese users: Detects Traditional vs Simplified (defaults to Simplified)
 - Japanese/Korean users: Auto-detects respective languages
+- European languages: Auto-detects German, Spanish, French, Italian, Dutch, Portuguese, Russian, and Swedish
 - Fallback to English for unsupported languages
 
 **Persistent Storage**: User language preference saved to localStorage as `diablo-language`

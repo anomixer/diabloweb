@@ -1,0 +1,41 @@
+{
+  "ui": {
+    "loading": "Carregando...",
+    "manageSaves": "Gerenciar Saves",
+    "uploadSave": "Enviar Save",
+    "back": "Voltar",
+    "selectMPQ": "Selecionar MPQ",
+    "playShareware": "Jogar Shareware",
+    "downloadSave": "Baixar arquivo de save",
+    "deleteSave": "Tem certeza que deseja excluir {fileName}?",
+    "language": "Idioma"
+  },
+  "intro": {
+    "description": "Esta é uma adaptação web do jogo Diablo original, baseada no código fonte reconstruído por GalaXyHaXz e equipe devilution. A página do projeto com informações e links pode ser encontrada aqui",
+    "gameOwnership": "Se você possui o jogo original, pode arrastar o DIABDAT.MPQ original para esta página ou clicar no botão abaixo para começar a jogar. O jogo pode ser comprado em",
+    "purchaseComplete": ".",
+    "compressionOption": "Clique aqui para comprimir o MPQ, reduzindo significativamente seu tamanho.",
+    "sharewareOption": "Ou você pode jogar a versão shareware gratuitamente (otimizada para web, download ~25MB)."
+  },
+  "errors": {
+    "errorOccurred": "Ocorreu o seguinte erro:",
+    "createIssue": "Clique para criar um issue no GitHub",
+    "invalidMPQ": "Por favor selecione um arquivo MPQ. Se você baixou o instalador do GoG, precisará instalá-lo no PC e usar o arquivo MPQ da pasta de instalação."
+  },
+  "playerClass": {
+    "0": "Guerreiro",
+    "1": "Ladino",
+    "2": "Feiticeiro"
+  },
+  "compression": {
+    "description": "Você pode usar esta ferramenta para reduzir o MPQ original para cerca de metade do seu tamanho. Ela codifica sons no formato MP3 e usa melhor compressão para arquivos normais. Para começar, clique no botão abaixo ou arraste o MPQ para a página.",
+    "processing": "Processando...",
+    "downloadPrompt": "Clique aqui se o download não iniciar."
+  },
+  "progress": {
+    "loading": "Carregando...",
+    "processing": "Processando...",
+    "initializing": "Inicializando...",
+    "downloading": "Baixando..."
+  }
+}
